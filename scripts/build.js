@@ -22,8 +22,7 @@ function esc(s) {
   return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 }
 
-const BRAND_SVG =
-  '<svg viewBox="0 0 32 32" width="26" height="26" fill="none"><path d="M2 22c3 0 3-3 6-3s3 3 6 3 3-3 6-3 3 3 6 3 3-3 6-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M2 27c3 0 3-3 6-3s3 3 6 3 3-3 6-3 3 3 6 3 3-3 6-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity="0.5"/><circle cx="16" cy="10" r="4.5" stroke="currentColor" stroke-width="1.6"/></svg>';
+const BRAND_MARK = '<img class="brand__mark" src="../assets/logo-mark.png" alt="" width="38" height="38" />';
 const WA_SVG =
   '<svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15l-1.3 4.8L7 20.5A10 10 0 1 0 12 2z"/></svg>';
 
@@ -32,7 +31,7 @@ function navHTML() {
   <header class="nav" id="nav">
     <div class="nav__inner">
       <a href="../index.html" class="brand" aria-label="Marsa Moments home">
-        <span class="brand__mark" aria-hidden="true">${BRAND_SVG}</span>
+        ${BRAND_MARK}
         <span class="brand__text">Marsa<em>Moments</em></span>
       </a>
       <nav class="nav__links" aria-label="Primary">
@@ -61,7 +60,10 @@ function footerHTML() {
   <footer class="footer">
     <div class="footer__inner">
       <div class="footer__brand">
-        <span class="brand brand--footer"><span class="brand__mark" aria-hidden="true">${BRAND_SVG}</span><span class="brand__text">Marsa<em>Moments</em></span></span>
+        <span class="brand brand--footer">
+          <img class="brand__mark" src="../assets/logo-mark.png" alt="" width="46" height="46" />
+          <span class="brand__text">Marsa<em>Moments</em></span>
+        </span>
         <p data-i18n="footer.tagline">Curated Red Sea excursions in Marsa Alam, Egypt.</p>
       </div>
       <div class="footer__col">
@@ -139,7 +141,7 @@ function tourPage(x) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>${esc(c.title)} — Marsa Moments</title>
   <meta name="description" content="${esc(c.short)}" />
-  <meta name="theme-color" content="#0a3a3a" />
+  <meta name="theme-color" content="#17304f" />
   <link rel="canonical" href="${url}" />
   <link rel="alternate" hreflang="en" href="${url}" />
   <link rel="alternate" hreflang="ar" href="${url}?lang=ar" />
@@ -156,6 +158,8 @@ function tourPage(x) {
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600&family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../styles/main.css" />
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="../assets/logo-mark.png" sizes="any" />
+  <link rel="apple-touch-icon" href="../assets/logo-mark.png" />
   <script type="application/ld+json">
 ${jsonLD(x)}
   </script>

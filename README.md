@@ -66,6 +66,17 @@ var CONFIG = {
 - **Add / edit excursions** in `MARSA_EXCURSIONS` — each has `en` and `ar` content. Then run `node scripts/build.js`.
 - **Images** currently hotlink Unsplash for a quick start. Swap in your own Marsa Alam photos for the strongest impression (drop them in `assets/` and update each `img` path), then rebuild.
 
+### Brand assets
+
+The site uses your Marsa Moments logo and a matching **navy + gold + ocean-blue** palette. Logo assets live in `assets/`:
+
+- `logo.png` — full transparent lockup (Marsa Moments · Excursions & Trips)
+- `logo-mark.png` — the emblem only (used in the nav, footer and as the favicon)
+- `og-logo.png` — social-share image (1200×630, on brand navy)
+- `favicon.svg` — vector favicon in brand colours
+
+The palette is defined once as CSS variables at the top of `styles/main.css` (`--deep` navy, `--gold`, `--sea`/`--lagoon` ocean blues) — change those values to retune the whole site.
+
 ## 📨 Connecting the lead form to a backend
 
 By default the form validates and forwards the enquiry to WhatsApp — a complete no-server lead flow. To also **store and email** every lead:
