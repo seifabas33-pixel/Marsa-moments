@@ -12,8 +12,8 @@
     // Public site URL (used for canonical links, sitemap, OG). No trailing slash.
     siteUrl: "https://seifabas33-pixel.github.io/marsa-moments",
 
-    // WhatsApp number — digits only, incl. country code. Replace with the real one.
-    whatsapp: "201000000000",
+    // WhatsApp number — digits only, incl. country code. (0103 529 9659 → +20 10 3529 9659)
+    whatsapp: "201035299659",
     whatsappGreeting: {
       en: "Hi Marsa Moments! I'd love to plan some excursions in Marsa Alam.",
       ar: "مرحبًا مرسى مومنتس! أودّ التخطيط لبعض الرحلات في مرسى علم."
